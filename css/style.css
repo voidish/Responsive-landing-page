@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body {
+      font-family: 'PT Sans', sans-serif;
+      background-color: #252529;
+      margin: 0;
+      color: #ffffff;
+      line-height: 1.6;
+}
+
+/* Showcase */
+#showcase {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.7)), url(../img/showcase.jpg ) no-repeat center/cover;
+      width: 100%;
+      /* vh = viewport heigh */
+      height: 100vh;
+      position: relative;
+      /* to get rid of the gap on top of the menu we can use overflow-y */
+      overflow-y: hidden;
+}
+
+#showcase .container {
+      margin-top: 30vh;
+}
+
+#showcase h1 {
+      font-size: 4rem;
+      margin-bottom: 0;
+}
+
+#showcase h2 {
+      font-size: 2rem;
+}
+
+
+/* Utility Classes */
+.container {
+      max-width: 1180px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 3rem;
+}
+
+.lead {
+      font-size: 1.3rem;
+}
+
+/* Navigation styling */
+nav {
+      height: 40px;
+      width: 100%;
+      background-color: #333;
+      color: #eee;
+      /* to make the nav stay on top while scrolling */
+      position: fixed;
+}
+
+nav ul {
+      padding: 0;
+      margin: 0;
+}
+
+nav li {
+      display: inline;
+      float: left;
+}
+
+nav a {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 0;
+      color: #eee;
+      text-decoration: none;
+}
+
+nav li:hover {
+      background-color: #444;
+}
+
+nav a#openup {
+      display: none;
+}
+
+@media screen and (max-width: 580px) {
+      .hide-on-small {
+            display: none;
+      }
+#showcase  { 
+      height: 50vh;
+}
+#showcase .container { 
+      margin-top: 16vh;
+}
+
+#showcase h1 { 
+      font-size: 2.5rem;
+      line-height: 3rem;
+}
+
+#showcase h2 { 
+      font-size: 1.3rem;
+}
+      nav {
+            height: auto;
+            border-bottom: 0;
+      }
+
+      nav ul {
+            display: none;
+            height: auto;
+      }
+
+      nav li {
+            width: 100%;
+            float: left;
+            position: relative;
+      }
+
+      nav a {
+            text-align: left;
+            width: 100%;
+            text-indent: 25px;
+            background: #333;
+            border-bottom: 1px solid #555;
+      }
+
+      nav a:hover {
+            background: #444;
+      }
+
+      nav a#openup:after {
+            content: "|||";
+            transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            /* IE 9 */
+            -webkit-transform: rotate(-90deg);
+            /* Safari and Chrome */
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: 20px;
+      }
+
+      nav a#openup {
+            display: block;
+            background-color: #333;
+            width: 100%;
+            position: relative;
+      }
+}
+
+.cf:before,
+.cf:after {
+      content: "";
+      display: table;
+}
+
+.cf:after {
+      clear: both;
+}
+
+.cf {
+      zoom: 1;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
