@@ -1,11 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+/* CSS Variables */
+:root {
+      --primary-color: #b90415;
+      --primary-color-hover: #d3071b;
+      --secondary-color: #103063;
+      --secondary-color-hover: #143f85;
+      --light-color: #f4f4f4;
+}
+
+* {
+      /* border: 1px solid red; */
+
+}
+
 body {
       font-family: 'PT Sans', sans-serif;
       background-color: #252529;
       margin: 0;
       color: #ffffff;
       line-height: 1.6;
+}
+
+/* to put all the images inside the screen */
+img {
+      width: 100%;
+}
+
+a {
+      text-decoration: none;
+      color: #ccc;
+}
+
+/* Section */
+.section {
+      padding: 2rem 0;
+}
+
+.section-head {
+      font-size: 2.5rem;
+      margin: 0;
+}
+
+.section h3 {
+      font-size: 2rem;
+}
+
+section#entertainment {
+      background: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)), url(../img/entertainment.jpg) no-repeat bottom/cover;
+      padding: 8rem;
 }
 
 /* Showcase */
@@ -46,6 +90,58 @@ body {
 
 .lead {
       font-size: 1.3rem;
+}
+
+/* margin-bottom class */
+.mb {
+      margin-bottom: 1rem;
+}
+
+/* margin-top class */
+.mt {
+      margin-top: 1rem;
+}
+
+.bg-light {
+      background: var(--light-color);
+      color: #333;
+}
+
+/* Buttons */
+.btn {
+      padding: 1rem;
+      color: white;
+      display: inline-block;
+
+}
+
+.btn-primary {
+      background: var(--primary-color);
+}
+
+.btn-primary:hover {
+      background: var(--primary-color-hover);
+}
+
+.btn-secondary {
+      background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+      background: var(--secondary-color-hover);
+}
+
+/* Text color */
+.text-primary {
+      color: var(--primary-color);
+}
+
+.text-secondary {
+      color: var(--secondary-color);
+}
+
+.text-light {
+      color: var(--light-color);
 }
 
 /* Navigation styling */
@@ -90,21 +186,24 @@ nav a#openup {
       .hide-on-small {
             display: none;
       }
-#showcase  { 
-      height: 50vh;
-}
-#showcase .container { 
-      margin-top: 16vh;
-}
 
-#showcase h1 { 
-      font-size: 2.5rem;
-      line-height: 3rem;
-}
+      #showcase {
+            height: 50vh;
+      }
 
-#showcase h2 { 
-      font-size: 1.3rem;
-}
+      #showcase .container {
+            margin-top: 16vh;
+      }
+
+      #showcase h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+      }
+
+      #showcase h2 {
+            font-size: 1.3rem;
+      }
+
       nav {
             height: auto;
             border-bottom: 0;
