@@ -11,7 +11,6 @@
 
 * {
       /* border: 1px solid red; */
-
 }
 
 body {
@@ -49,7 +48,15 @@ a {
 section#entertainment {
       background: linear-gradient(rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.6)), url(../img/entertainment.jpg) no-repeat bottom/cover;
-      padding: 8rem;
+      padding: 5rem 0;
+}
+
+.gift-cards{
+      display: grid;
+      grid-gap: 20px;
+      /* columns */
+      grid-template-columns: repeat(2, 1fr );
+      text-align: left;
 }
 
 /* Showcase */
@@ -79,6 +86,31 @@ section#entertainment {
       font-size: 2rem;
 }
 
+/* Footer */
+footer .footer-cols {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2rem;
+      text-align: left;
+      font-size: 14px;
+}
+
+footer  .footer-cols ul {
+      list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: #444 solid 1px;
+      margin-bottom: 1rem;
+}
+
+.footer-bottom  { 
+      background: #333;
+      padding: 1rem 0;
+}
 
 /* Utility Classes */
 .container {
@@ -105,6 +137,10 @@ section#entertainment {
 .bg-light {
       background: var(--light-color);
       color: #333;
+}
+
+.text-center {
+      text-align: center;
 }
 
 /* Buttons */
@@ -144,6 +180,7 @@ section#entertainment {
       color: var(--light-color);
 }
 
+
 /* Navigation styling */
 nav {
       height: 40px;
@@ -181,6 +218,7 @@ nav li:hover {
 nav a#openup {
       display: none;
 }
+
 
 @media screen and (max-width: 580px) {
       .hide-on-small {
@@ -267,6 +305,22 @@ nav a#openup {
 
 .cf {
       zoom: 1;
+}
+
+@media screen and (max-width: 780px) {
+      .gift-cards {
+            grid-template-columns: 1fr;
+      }
+
+      footer .footer-cols {
+            display: none;
+      }
+}
+
+@media screen and (max-height: 580px) {
+      #showcase p.lead {
+            display: none;
+      }
 }
 
 /* For IE 6/7 (trigger hasLayout) */
