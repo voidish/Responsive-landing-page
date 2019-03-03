@@ -5,20 +5,21 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
             crossorigin="anonymous">
-      <title>Welcome to my coolTunes</title>
+      <title>Welcome to musicHub</title>
 </head>
 
 <body>
       <!-- showcase and nav -->
       <div id="showcase">
             <header>
-                  <!-- nav bar is downloaded from codepen -->
+                  <!-- nav bar  -->
                   <nav class='cf'>
                         <ul class='cf'>
-                              <li class="hide-on-small"><a hr ef="#showcase">coolTunes</a></li>
+                              <li class="hide-on-small"><a href="#showcase">musicHub</a></li>
                               <li>
                                     <a href='#showcase'>Overview</a>
                               </li>
@@ -31,31 +32,320 @@
                               <li>
                                     <a href='#gift-cards'>Gift Cards</a>
                               </li>
+                              <li>
+                                    <a href='#contact'>Contact Us</a>
+                              </li>
                         </ul>
-                        <a href='#' id='openup'>coolTunes</a>
+                        <a href='#' id='openup'>musicHub</a>
                   </nav>
             </header>
 
             <div class="section-main container">
-                  <h1>coolTunes.</h1>
+                  <h1>musicHub.</h1>
                   <h2>Your music and movies take centre stage.</h2>
-                  <p class="lead hide-on-small">coolTunes is the best way to organise and enjoy the music and movies you
-                        already have — and shop for the ones you want. Enjoy all the entertainment coolTunes has to offer
+                  <p class="lead hide-on-small">musicHub is the best way to organise and enjoy the music and movies
+                        you
+                        already have — and shop for the ones you want. Enjoy all the entertainment musicHub has to
+                        offer
                         on your Mac and PC.</p>
             </div>
       </div>
 
       <!-- music section -->
-      section#music
+      <section id="music" class="section">
+            <div class="container">
+                  <h2 class="section-head">
+                        <i class="fas fa-music"></i>Music
+                  </h2>
+
+                  <h3>60 million songs. Zero ads.</h3>
+                  <p class="lead">Stream over 50 million songs, ad-free. Or download albums and tracks to listen to
+                        offline. All the music in your personal CoolTunes library — no matter where it came from —
+                        lives alongside the best Music catalogue.
+                        Start your free three-month trial with no commitment, and cancel at any time.</p>
+                  <a href="#" class="btn btn-primary mb">Start you tiral now</a>
+                  <p class="text-light">Best musics are available in musicHub, and for iOS and Android devices.</p>
+                  <img src="img/mockup1.png" alt="music mock up">
+            </div>
+      </section>
 
       <!-- Video Section -->
+      <section id="video" class="section bg-light">
+            <div class="container">
+                  <h3>The movie collection you always wished for. Granted.</h3>
+                  <p class="lead">With thousands of movies to choose from, there’s always something great to watch on
+                        iTunes. And if you watch on Apple TV 4K, you’ll be able to enjoy a tremendous selection of your
+                        favourite content in 4K HDR. Catch up on hit movies you’ve been meaning to see — any time,
+                        anywhere. Just tap to play, or even download if you’re going somewhere you won’t have Wi-Fi.</p>
+                  <img src="img/mockup2.png" class="mb" alt="cellphone mockup">
+                  <a href="#" class="btn btn-secondary mb mt">Read more</a>
+
+                  <!-- some video sample Section -->
+                  <div class="sample-video">
+                        <div class="video">
+                              <video id="myVideo" autoplay muted loop>
+                                    <source id="mp4" src="video/bgVideo.mp4" type="video/mp4">
+                                    <p>Your user agent does not support the HTML5 Video element.</p>
+                        </div> </video>
+                        <div class="content">
+                              <h3 class="nm">The California Honeydrops</h3>
+                              <p class="lead nm ">The Tuning Fork are excited to welcome R&B/Soul group, The
+                                    California Honeydrops, to our shores in April 2019 for their debut NZ visit!</p>
+                              <a onclick="pauseVideo()" class="myBtn btn btn-secondary mb mt">Pause</a>
+                              <a id="buyBtn" class="buyBtn myBtn btn btn-primary mb mt">Purchase</a>
+                              <!-- <input type="submit" value="Submit"> -->
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <!-- Popup menu  -->
+      <section id="ticketForm" class="section bg-light">
+            <div id="mypopup" class="popup">
+                  <!-- popup content -->
+                  <div class="popup-content">
+                        <div class="popup-header">
+                              <span class="close">&times;</span>
+                              <h2><i class="fas fa-credit-card"></i></i>Buy Ticket</h2>
+                        </div>
+                        <div class="popup-body">
+                              <!-- Tabs -->
+                              <div class="tab">
+                                    <button class="tablinks" onclick="openTicket(event, 'bandDescription')" id="defaultOpen">Band
+                                          Description</button>
+                                    <button class="tablinks" onclick="openTicket(event, 'Purchase Ticket')">Purchase
+                                          Ticket</button>
+                              </div>
+
+                              <div id="bandDescription" class="tabcontent">
+                                    <h3>The California Honeydrops</h3>
+                                    <p class="smallDesc"><small>The Tuning Fork, 42-80 Mahuhu Crescent, Auckland, CBD,
+                                                Auckland</small></p>
+                                    <p class="smallDesc"><small>Thursday 11 April 2019 7:00pm – 11:00pm</small></p>
+                                    <img src="img/band-picture.png" alt="The California Honeydrops">
+                                    <p>The Tuning Fork are excited to welcome R&B/Soul group, The California
+                                          Honeydrops, to our shores in April 2019 for their debut NZ visit!<br><br>
+
+                                          "The California Honeydrops have crafted an easy listening sound that marries
+                                          the bounce and strut of the Big Easy with the soul of Memphis and Muscle
+                                          Shoals." - No depression<br><br>
+
+                                          "For more than 90 minutes on Sunday, the Honeydrops made Jefferson Center
+                                          feel more like a Big Easy with move-inducing grooves, blasting horns, pumping
+                                          Hammond organ and one whale of a frontman in singer/guitarist/trumpeter Lech
+                                          Wierzynski." - The Roanoke Times<br><br>
+
+                                          The California Honeydrops celebrate their 10th year together with the release
+                                          of their 7th studio album and first ever double album, Call It Home: Vol. 1 &
+                                          2 and continue to perform worldwide. Led by dynamic vocalist and
+                                          multi-instrumentalist Lech Wierzynski, and drawing on diverse musical
+                                          influences from Bay Area R&B, funk, Southern soul, Delta blues, and New
+                                          Orleans second-line, the Honeydrops bring vibrant energy and infectious
+                                          dance-party vibes to their shows.
+                                          <br><br>
+                                          In 2016 & 2017 the Honeydrops were honored to support Bonnie Raitt on her
+                                          North America release tour—and in the past have been privileged to support
+                                          the likes of B.B. King, Allen Toussaint, Buddy Guy, and Dr. John.
+                                          <br><br>
+                                          Whether in those high-profile performances or in more intimate venues where
+                                          the band itself can leave the stage and get down on the dance floor, the
+                                          California Honeydrops’ shared vision and purpose remain: to make the audience
+                                          dance and sing.
+                                          <br><br>
+                                          Honeydrops have come a long way since guitarist and trumpeter Lech
+                                          Wierzynkski and drummer Ben Malament started busking in an Oakland subway
+                                          station, but the band has stayed true to that organic, street-level feel.
+                                          Listening to Lech sing, it can be a surprise that he was born in Warsaw,
+                                          Poland, and raised by Polish political refugees.
+                                          <br><br>
+                                          He learned his vocal stylings from contraband American recordings of Sam
+                                          Cooke, Ray Charles, and Louis Armstrong, and later at Oberlin College and on
+                                          the club circuit in Oakland, California. With the additions of Johnny Bones
+                                          on tenor sax and clarinet, Lorenzo Loera on keyboards, and Beau Bradbury on
+                                          bass, they’ve built a powerful full-band sound to support Wierzynski’s
+                                          vocals.
+                                          <br><br>
+                                          More like parties than traditional concerts, their shows feature extensive
+                                          off-stage jamming and crowd interaction. “The whole point is to erase the
+                                          boundaries between the crowd and us,” Wierzynski says. “We don’t make
+                                          setlists. We want requests. We want crowd involvement, to make people become
+                                          a part of the whole thing by dancing along, singing, picking the songs and
+                                          generally coming out of their shells.”</p><br><br>
+                                    <div style="margin-top: 100px;"></div>
+                              </div>
+
+                              <div id="Purchase Ticket" class="tabcontent">
+                                    <!-- <h3>Purchase Ticket</h3> -->
+                                    <!-- Buy Ticket form -->
+                                    <div id="ticketForm" class="section">
+                                          <div class="container">
+                                                <form name="buyForm" class="form-popup" id="myForm" onsubmit="return validateForm()">
+                                                      <form action="" class="form-container">
+                                                            <label for="name"><b>Name:</b></label>
+                                                            <input type="text" placeholder="Enter your full name" name="name"
+                                                                  required>
+
+                                                            <label for="address"><b>Address:</b></label>
+                                                            <input type="text" placeholder="Enter your address" name="address"
+                                                                  required>
+
+                                                            <label for="email"><b>Email:</b></label>
+                                                            <input type="email" placeholder="Enter your email" name="email"
+                                                                  required>
+
+                                                            <label for="credit"><b>Credit Number:</b></label>
+                                                            <input type="text" placeholder="Enter Credit Number" name="creditNumber" onkeyup="digitsOnly(this)"
+                                                                  required>
+
+
+                                                            <div class="radioButtons">
+                                                                  <label for="credit"><b>Credit card type:</b></label>
+                                                                  <div>
+                                                                        <input  id="visa" type="radio" name="card" value="visa"
+                                                                              required><span>Visa
+                                                                              Card</span><br>
+                                                                  </div>
+                                                                  <div>
+                                                                        <input id="master" type="radio" name="card" value="mastercard"
+                                                                              required><span>MasterCard</span><br>
+                                                                  </div>
+                                                                  <div>
+                                                                        <input id="amex" type="radio" name="card" value="amex"
+                                                                              required><span>AmEx</span><br>
+                                                                  </div>
+                                                            </div>
+
+                                                            <div class="formButtons" id="termsCheckBox">
+                                                                  <input type="checkbox" name="rules" value="rulesAcceptance"
+                                                                        required><span style="margin-left: 5px;">I
+                                                                        accept the <a href="#">terms
+                                                                              and conditions</a></span><br>
+                                                            </div>
+                                                            <div class="formButtons">
+                                                                  <input type="submit" value="Submit" onsubmit="return validateForm()">
+                                                                  <input type="reset">
+                                                            </div>
+                                                      </form>
+                                                </form>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="popup-footer">
+                              <!-- <h3>popup Footer</h3> -->
+                        </div>
+                  </div>
+      </section>
 
       <!-- Entertainment Section -->
+      <section id="entertainment" class="section">
+            <div class="container">
+                  <h3>A world of entertainment.
+                        Available wherever you are.</h3>
+                  <p class="lead">The musicHub Store is available on all your devices, which means you can buy that
+                        catchy song you just heard or rent that movie you’ve been meaning to see, whenever you
+                        want.
+                        And since your entire library of music and movies lives in iCloud, everything you buy is
+                        immediately available, no matter how you want to play it.</p>
+            </div>
+      </section>
 
       <!-- Giftcard Section -->
+      <section id="gift-cards" class="section bg-light">
+            <div class="container">
+                  <div class="gift-cards">
+                        <div>
+                              <img src="img/giftcard.png" alt="">
+                        </div>
+                        <div>
+                              <h2>Gift Cards</h2>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, cum ducimus? Aut
+                                    quaerat, dolores quasi voluptate, repellat quibusdam minima, tenetur sunt
+                                    aspernatur sint minus inventore vero? Odio consectetur facere quae?</p>
+                              <p>Already have an App Store & iTunes or Apple Store gift card?</p>
+                              <hr>
+                              <a href="#" class="text-secondart">
+                                    <i class="fas fa-chevron-right"></i>Redeem
+                              </a>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <!-- Contact Us -->
+      <section id="contact" class="section">
+            <div class="container">
+                  <h2 class="section-head">
+                        <i class="fas fa-address-book"></i>Contact Us
+                  </h2>
+                  <form action="" class="mt">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                              <option value="australia">Australia</option>
+                              <option value="canada">Canada</option>
+                              <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject:</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"
+                              required></textarea>
+                        <div class="formButtons">
+                              <input type="submit" value="Submit" onclick="contact()">
+                              <input type="reset">
+                        </div>
+                  </form>
+            </div>
+      </section>
 
       <!-- Footer -->
+      <footer>
+            <div class="container">
+                  <div class="footer-cols">
+                        <ul>
+                              <li>Shop and Learn</a></li>
+                              <li><a href="#">Mac</a></li>
+                              <li><a href="#">iPad</a></li>
+                              <li><a href="#">iPhone</a></li>
+                              <li><a href="#">Watch</a></li>
+                              <li><a href="#">TV</a></li>
+                              <li><a href="#">Music</a></li>
+                              <li><a href="#">iTunes</a></li>
+                              <li><a href="#">iPod touch</a></li>
+                              <li><a href="#">Accerssories</a></li>
+                              <li><a href="#">Gift Cards</a></li>
+                        </ul>
 
+                        <ul>
+                              <li>Apple Store</li>
+                              <li><a href="#">Refurbished nad Clearance</a></li>
+                              <li><a href="#">Financing</a></li>
+                              <li><a href="#">Cool Recycling program</a></li>
+                              <li><a href="#">Order Status</a></li>
+                              <li><a href="#">Shopping Help</a></li>
+                              <li><a href="#">Cusomer Law</a></li>
+                        </ul>
+
+                        <ul>
+                              <li>About coolTunes</li>
+                              <li><a href="#">Newsroom</a></li>
+                              <li><a href="#">Job Opportunities</a></li>
+                              <li><a href="#">Inverstors</a></li>
+                              <li><a href="#">Events</a></li>
+                              <li><a href="#">Contact Cool</a></li>
+                        </ul>
+                  </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                  Copywrite &copy; 2019 musicHub
+            </div>
+      </footer>
 
       <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
