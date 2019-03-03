@@ -102,19 +102,37 @@ function openTicket(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+// Controlling the credit card number input that only accpets digits
+function digitsOnly(input) {
+      // The regular expression is only accepting digits
+      var regEx = /[^0-9]/gi;
+      input.value = input.value.replace(regEx, "");
+}
+
 // validate buy ticket form and finalize the purchase
 function validateForm() {
       var name = document.forms["buyForm"]["name"].value;
       var address = document.forms["buyForm"]["address"].value;
       var email = document.forms["buyForm"]["email"].value;
       var creditNumber = document.forms["buyForm"]["creditNumber"].value;
+      // getting the last four digits out of the credit number
+      var lfDigits = creditNumber.substr(creditNumber.length - 4);
+      var cardName;
+      // using jQuery getting the radio button which is checked 
+      if ($('#visa').is(':checked')) {
+            cardName = "Visa";
+      } else if ($('#master').is(':checked')) {
+            cardName = "master";
+      } else {
+            cardName = "AmEx";
+      }
 
       // If creditNumber is Not a Number 
       if (isNaN(creditNumber)) {
             // ---> don't show an alert. instead forcus on the form or make it red
-            alert("The credit number must be a number");
+            document.getElementById('creditNum').style.backgroundColor = red;
       } else {
-            var strMsg = "Hi " + name + " thanks for purchasing our product using your credit card no. xxxx xxxx xxxx We will email your receipt on " + email + " and send the product to " + email;
+            var strMsg = "Hi " + name + " thanks for purchasing the ticket using your " + cardName + "card no. xxxx xxxx xxxx " + lfDigits + "\nWe will email your eTicket on " + email + " and send the physical ticket to " + address;
             alert(strMsg);
       }
 }

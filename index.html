@@ -194,23 +194,23 @@
                                                                   required>
 
                                                             <label for="credit"><b>Credit Number:</b></label>
-                                                            <input type="text" placeholder="Enter Credit Number" name="creditNumber"
+                                                            <input type="text" placeholder="Enter Credit Number" name="creditNumber" onkeyup="digitsOnly(this)"
                                                                   required>
 
 
                                                             <div class="radioButtons">
                                                                   <label for="credit"><b>Credit card type:</b></label>
                                                                   <div>
-                                                                        <input type="radio" name="card" value="visa"
+                                                                        <input  id="visa" type="radio" name="card" value="visa"
                                                                               required><span>Visa
                                                                               Card</span><br>
                                                                   </div>
                                                                   <div>
-                                                                        <input type="radio" name="card" value="mastercard"
+                                                                        <input id="master" type="radio" name="card" value="mastercard"
                                                                               required><span>MasterCard</span><br>
                                                                   </div>
                                                                   <div>
-                                                                        <input type="radio" name="card" value="amex"
+                                                                        <input id="amex" type="radio" name="card" value="amex"
                                                                               required><span>AmEx</span><br>
                                                                   </div>
                                                             </div>
