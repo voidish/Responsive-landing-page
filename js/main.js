@@ -118,6 +118,7 @@ function validateForm() {
       // getting the last four digits out of the credit number
       var lfDigits = creditNumber.substr(creditNumber.length - 4);
       var cardName;
+      // using jQuery getting the radio button which is checked 
       if ($('#visa').is(':checked')) {
             cardName = "Visa";
       } else if ($('#master').is(':checked')) {
